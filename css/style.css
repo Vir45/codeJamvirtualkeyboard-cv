@@ -1,0 +1,78 @@
+.wrapper {
+    margin: 0 auto;
+    padding-top: 80px;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+#textarea {
+    width: 850px;
+    height: 200px;
+    margin-bottom: 80px;
+    font-size: 25px;
+}
+
+.keybourd {
+    width: 800px;
+    margin-bottom: 50px;
+    margin-left: 60px;
+}
+
+.keybourd>div {
+    width: 750px;
+    margin-bottom: 6px;
+}
+
+.keybourd>div button {
+    width: 45px;
+    height: 40px;
+    margin-left: 4px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    background: #3a424e;
+    border-radius: 3px;
+    line-height: 30px;
+    cursor: pointer;
+    transition: border-radius 0.2s, background 0.2s;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.keybourd>div button:hover {
+    background-color: slateblue;
+}
+
+#Backspace,
+#CapsLock,
+#ShiftLeft,
+#ShiftRight {
+    width: 94px
+}
+
+#Tab,
+#Enter {
+    width: 94px;
+}
+
+#Space {
+    width: 256px;
+}
+
+#AltRight,
+#AltLeft,
+#win {
+    width: 54px;
+}
+
+#ControlLeft {
+    width: 60px;
+}
+
+#ControlRight {
+    width: 94px;
+}
