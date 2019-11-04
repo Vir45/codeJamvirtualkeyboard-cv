@@ -417,12 +417,12 @@ keybourd.addEventListener('click', function(event) {
 
     if (button.textContent == 'Space') {
         addAmimation(button);
-        textarea.textContent += ' ';
+        textarea.value += ' ';
     }
 
     if (button.textContent == 'Enter') {
         addAmimation(button);
-        textarea.textContent += '\n';
+        textarea.value += '\n';
     }
 
     if (button.textContent == 'Backspace') {
