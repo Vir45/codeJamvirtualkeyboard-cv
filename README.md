@@ -1,1 +1,1 @@
-https://vir45.github.io/codejam-virtual-keyboard-cv/cv
+https://vir45.github.io/CodeJamvirtualkeyboard-cv/cv
