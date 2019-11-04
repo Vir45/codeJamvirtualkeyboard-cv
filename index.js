@@ -75,6 +75,7 @@ let russianKeybord = [
     ]
 ];
 
+
 let englishKeybord = [
     [
         ["Backquote", "~"],
@@ -151,8 +152,8 @@ let englishKeybord = [
     ]
 ];
 
-
 ///////////////////////////Created DOM elements
+
 let wrapper = document.createElement('div');
 wrapper.className = 'wrapper';
 document.body.prepend(wrapper);
@@ -176,6 +177,7 @@ function getRowKeyboard() {
 }
 
 keybourd.append(...getRowKeyboard());
+
 
 function getInnerForButton(arr) {
     let result = [];
@@ -293,7 +295,7 @@ window.onload = () => {
         changeLangForRissia(document.querySelector('.row-4').children, russianKeybord[3]);
         changeLangForRissia(document.querySelector('.row-5').children, russianKeybord[4]);
     }
-};
+}
 
 function changeLangForRissia(arr, array) {
     let i = 0;
@@ -323,8 +325,7 @@ function changeLangForEnglish(arr, array) {
         i++
     }
     lg = 'english';
-};
-
+}
 
 ///////////////////////////Created event for selected languages
 document.addEventListener('keydown', (event) => {
@@ -344,7 +345,6 @@ document.addEventListener('keydown', (event) => {
         }
     }
     localStorage.setItem('keyOfLang', lg);
-    event.preventDefault();
 });
 
 
@@ -373,7 +373,7 @@ function changeSizeforLarge(arr, array, j) {
         i++;
     }
     size = 'large';
-};
+}
 
 function changeSizeforSmall(arr, array, j) {
     let i = 0;
@@ -397,7 +397,7 @@ function changeSizeforSmall(arr, array, j) {
         i++;
     }
     size = 'small';
-};
+}
 
 
 ///////////////////////////Created event click at the button
@@ -430,6 +430,7 @@ keybourd.addEventListener('click', function(event) {
         textarea.value = textarea.value.slice(0, textarea.value.length - 1);
     }
 
+
     if (button.textContent == 'CapsLock') {
         addAmimation(button);
         if (size == 'small' && lg == 'english') {
@@ -453,6 +454,10 @@ keybourd.addEventListener('click', function(event) {
         }
     }
 });
+
+
+
+
 
 
 ///////////////////////////Created event press on shift button
@@ -506,6 +511,11 @@ document.addEventListener('mouseup', (event) => {
 });
 
 
+
+
+
+
+
 ///////////////////////////Created event press on key
 document.addEventListener('keydown', (event) => {
 
@@ -549,15 +559,6 @@ document.addEventListener('keydown', (event) => {
             changeSizeforLarge(document.querySelector('.row-3').children, russianKeybord[2], 12);
             changeSizeforLarge(document.querySelector('.row-4').children, russianKeybord[3], 11);
         }
-    } else if (event.code == 'AltLeft') {
-        document.querySelector('#AltLeft').style.borderRadius = '15px';
-        document.querySelector('#AltLeft').style.background = 'steelblue';
-        return;
-    } else if (event.code == 'AltRight') {
-        document.querySelector('#AltRight').style.borderRadius = '15px';
-        document.querySelector('#AltRight').style.background = 'steelblue';
-        return;
-
     } else if (document.querySelector(str1)) {
         document.querySelector(str1).style.borderRadius = '15px';
         document.querySelector(str1).style.background = 'steelblue';
@@ -576,9 +577,9 @@ document.addEventListener('keydown', (event) => {
     } else if (document.querySelector(str)) {
         document.querySelector(str).style.borderRadius = '15px';
         document.querySelector(str).style.background = 'steelblue';
-        textarea.value += event.key;
+        // textarea.value += event.key;
     }
-    textarea.autofocus = "autofocus";
+
 });
 
 document.addEventListener('keyup', (event) => {
@@ -600,6 +601,7 @@ document.addEventListener('keyup', (event) => {
             changeSizeforSmall(document.querySelector('.row-3').children, russianKeybord[2], 12);
             changeSizeforSmall(document.querySelector('.row-4').children, russianKeybord[3], 11);
         }
+
     } else if (document.querySelector(str1)) {
         addAmimation(document.querySelector(str1));
     } else if (event.code == 'ArrowRight') {
