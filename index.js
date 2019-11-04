@@ -535,6 +535,7 @@ document.addEventListener('keyup', (event) => {
             changeSizeforSmall(document.querySelector('.row-3').children, russianKeybord[2], 12);
             changeSizeforSmall(document.querySelector('.row-4').children, russianKeybord[3], 11);
         }
+
     } else if (document.querySelector(str1)) {
         addAmimation(document.querySelector(str1));
     } else if (event.code == 'ArrowRight') {
